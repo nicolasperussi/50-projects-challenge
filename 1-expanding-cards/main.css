@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", "sans-serif";
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  gap: 32px;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  flex: 0.5;
+  border-radius: 32px;
+  transition: flex 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+.panel:hover {
+  flex: 0.75;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.4s;
+  color: white;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
